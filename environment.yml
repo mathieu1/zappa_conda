@@ -1,0 +1,13 @@
+name: zappa_conda_env
+channels:
+ - mathieu
+ - defaults
+dependencies:
+ - python=2.7
+ - flask
+ - pyyaml
+ - yaml
+ - pandas
+ - psycopg2
+ - nomkl
+ - zappa
