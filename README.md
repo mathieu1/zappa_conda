@@ -29,3 +29,9 @@ zappa update dev
 ## Testing the package size
 
 The `package_size` executable zips the current project and displays the resulting size.
+
+## Testing successful package deployment.
+
+The app allows to do basic testing of a successful deployment of the conda packages on lambda:
+- going to `your.APIGateway.url/dev/pkg_versions` will show you the versions of all the python packages listed in the `dependencies` section of the `environment.yml` file (by simply trying to import them and checking their version).
+- `your.APIGateway.url/dev/test_pandas` does tests some basic pandas dataframes operations.
