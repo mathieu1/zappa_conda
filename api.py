@@ -3,6 +3,8 @@ import importlib
 import pandas as pd
 import yaml
 import json
+import subprocess
+import re
 
 app = Flask(__name__)
 
@@ -13,11 +15,18 @@ def pkg_versions():
     versions = {}
     non_packages = {}
     for pkg_name in environment['dependencies']:
+        pkg_name = re.sub('[=<>][^\n]+', '',pkg_name)
         try:
             pkg = importlib.import_module(pkg_name)
             versions[pkg_name] = pkg.__version__
         except Exception as e:
-            non_packages[pkg_name] = str(e)
+            try:
+                non_packages[pkg_name] = subprocess.check_output([pkg_name,'--version']).decode('utf-8')
+            except Exception as e:
+                try:
+                    non_packages[pkg_name] = subprocess.check_output([pkg_name,'version']).decode('utf-8')
+                except Exception as e:
+                    non_packages[pkg_name] = str(e)
     return json.dumps({'package_versions':versions, 'non-python-packages':non_packages})
 
 
