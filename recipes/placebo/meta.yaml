@@ -20,12 +20,14 @@ requirements:
 
   run:
     - python
+    - boto3
+    - mock
+    - nose
 
 test:
   imports:
     - placebo
-  requires:
-    - botocore
+    
 
 about:
   home: https://github.com/garnaat/placebo

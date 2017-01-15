@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  path: /home/mathieu/github/mathieu1/zappa/
+  path: ../../../zappa/
 
 build:
   entry_points:
