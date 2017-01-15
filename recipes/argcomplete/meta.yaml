@@ -1,0 +1,62 @@
+package:
+  name: argcomplete
+  version: "1.7.0"
+
+source:
+  fn: argcomplete-1.7.0.tar.gz
+  url: https://pypi.python.org/packages/28/82/fdebbbcfb6740f080e6c039ce63f4f7b514eee10b801cd3452e4644a57f9/argcomplete-1.7.0.tar.gz
+  md5: 0b2d29bf937e9e51cec0479f9f44df93
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - argcomplete = argcomplete:main
+    #
+    # Would create an entry point called argcomplete that calls argcomplete.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - argcomplete
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kislyuk/argcomplete
+  license: Apache Software License
+  summary: 'Bash tab completion for argparse'
+  license_family: APACHE
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,33 @@
+{% set version = "2.0.2" %}
+
+package:
+  name: hjson
+  version: {{ version }}
+
+source:
+  fn: hjson-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/h/hjson/hjson-{{ version }}.tar.gz
+  md5: 3895ae6bad760b692a0afa7e62af11ab
+
+build:
+  number: 0
+  script: pip install --no-deps .
+
+requirements:
+  build:
+    - python
+    - pip
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - hjson
+    - hjson.tests
+
+about:
+  home: http://github.com/laktak/hjson-py
+  license: MIT License or Academic Free License (AFL)
+  summary: 'JSON for Humans, allows comments and is less error prone.'

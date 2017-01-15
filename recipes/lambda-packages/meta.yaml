@@ -1,0 +1,62 @@
+package:
+  name: lambda-packages
+  version: "0.11.0"
+
+source:
+  fn: lambda_packages-0.11.0.tar.gz
+  url: https://pypi.python.org/packages/48/f2/396e356e10de7c604e4c90f61716472788f018fa7395a678efad8f6c89ea/lambda_packages-0.11.0.tar.gz
+  md5: e729984ff480a535bd7e2b51699b0eff
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - lambda_packages = lambda_packages:main
+    #
+    # Would create an entry point called lambda_packages that calls lambda_packages.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+# requirements:
+#   build:
+#     - python
+#     - setuptools
+
+#   run:
+#     - python
+
+# test:
+  # Python imports
+  # imports:
+  #   - lambda_packages
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/Miserlou/lambda-packages
+  license: Apache Software License
+  summary: 'AWS Lambda Packages'
+  license_family: APACHE
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,65 @@
+package:
+  name: troposphere
+  version: "1.9.1"
+
+source:
+  fn: troposphere-1.9.1.tar.gz
+  url: https://pypi.python.org/packages/66/4d/55aec714a67e030bcb0f4aeeeca25c78dce6dfc5881b46a4834361defd23/troposphere-1.9.1.tar.gz
+  md5: a91b971782e8308e7e83bf61e200b7e4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - troposphere = troposphere:main
+    #
+    # Would create an entry point called troposphere that calls troposphere.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - troposphere
+    - troposphere.helpers
+    - troposphere.openstack
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  requires:
+    - awacs
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/cloudtools/troposphere
+  license: New BSD license
+  summary: 'AWS CloudFormation creation library'
+  license_family: BSD
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

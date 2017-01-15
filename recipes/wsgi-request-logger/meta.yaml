@@ -1,0 +1,61 @@
+package:
+  name: wsgi-request-logger
+  version: "0.4.6"
+
+source:
+  fn: wsgi-request-logger-0.4.6.tar.gz
+  url: https://pypi.python.org/packages/04/dd/5e6c52b96a841baec75e5c5647460214aa02e9c4902c7b250375352224c0/wsgi-request-logger-0.4.6.tar.gz
+  md5: 0e2fd4a5b676f34238de12a621368f24
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - wsgi-request-logger = wsgi-request-logger:main
+    #
+    # Would create an entry point called wsgi-request-logger that calls wsgi-request-logger.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - requestlogger
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/pklaus/wsgi-request-logger
+  license: BSD License or BSD License
+  summary: 'Apache-like combined logging for WSGI Web Applications'
+  license_family: BSD
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
