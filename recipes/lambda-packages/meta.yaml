@@ -1,16 +1,16 @@
 package:
   name: lambda-packages
-  version: "0.11.0"
+  version: "0.12.0"
 
 source:
-  fn: lambda_packages-0.11.0.tar.gz
-  url: https://pypi.python.org/packages/48/f2/396e356e10de7c604e4c90f61716472788f018fa7395a678efad8f6c89ea/lambda_packages-0.11.0.tar.gz
-  md5: e729984ff480a535bd7e2b51699b0eff
+  fn: lambda_packages-0.12.0.tar.gz
+  url: https://pypi.python.org/packages/30/62/1ef93c3b8d09c32866b6e1639f1653e7f3683802ea142287768b9040727a/lambda_packages-0.12.0.tar.gz
+  md5: f522eeebaf3837a80d91ed1294bf8e7c
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
+# build:
   # noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
@@ -24,7 +24,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 0
+  # number: 1
 
 requirements:
   build:

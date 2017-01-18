@@ -1,11 +1,11 @@
 package:
   name: tqdm
-  version: "4.10.0"
+  version: "4.11.0"
 
 source:
-  fn: tqdm-4.10.0.tar.gz
-  url: https://pypi.python.org/packages/88/14/0db1706f249108199bd92ccc5b59b4fd15425d6eb83dc061fbecf59a945e/tqdm-4.10.0.tar.gz
-  md5: 2ed4ecde54bf9a6a989b3197dcccd56a
+  fn: tqdm-4.11.0.tar.gz
+  url: https://pypi.python.org/packages/1f/40/53d3d17f30fa2f0c21ac6383f7ffcfffae7eabd816edfad216d2cf194702/tqdm-4.11.0.tar.gz
+  md5: 468cd5aa5edf6b3909433901a42c7f67
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -59,7 +59,7 @@ test:
 about:
   home: https://github.com/tqdm/tqdm
   license: Mozilla Public License 2.0 (MPL 2.0) or MIT License
-  summary: 'A Fast, Extensible Progress Meter'
+  summary: 'Fast, Extensible Progress Meter'
   license_family: MIT
 
 # See
