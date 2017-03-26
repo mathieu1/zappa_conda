@@ -2,6 +2,7 @@ name: zappa_conda_env
 channels:
  - mathieu
  - defaults
+ - conda-forge
 dependencies:
  - python=2.7
  - flask

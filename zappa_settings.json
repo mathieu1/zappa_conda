@@ -3,6 +3,9 @@
        "s3_bucket": "some-bucket", // The name of your S3 bucket
        "app_function": "api.app", // The python path to your WSGI application function. In Flask, this is your 'app' object.
        "use_precompiled_packages": false,
-       "keep_warm": false
+       "keep_warm": false,
+       "aws_region": "us-east-1",
+       "conda_mode": true,
+       "slim_handler": true
     }
 }

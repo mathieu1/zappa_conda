@@ -1,11 +1,11 @@
 package:
-  name: lambda-packages
-  version: "0.14.2"
+  name: durationpy
+  version: "0.3"
 
 source:
-  fn: lambda_packages-0.14.2.tar.gz
-  url: https://pypi.python.org/packages/20/b6/c2db93cd9b1da5ff2ac78fdb949f0d0a8837c80f8cf0e63afd4e793fadfe/lambda_packages-0.14.2.tar.gz
-  md5: 879e91ed4a33d305649d0334c67791fc
+  fn: durationpy-0.3.tar.gz
+  url: https://pypi.python.org/packages/ed/c7/3617c9c9de2e8429fe8a975af99f9539181c53db3d78438cfebabcd9dbb8/durationpy-0.3.tar.gz
+  md5: b24e3ee45d1c8c3854da2d61ced5ca39
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - lambda_packages = lambda_packages:main
+    # - durationpy = durationpy:main
     #
-    # Would create an entry point called lambda_packages that calls lambda_packages.main()
+    # Would create an entry point called durationpy that calls durationpy.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,7 +29,6 @@ source:
 requirements:
   build:
     - python
-    - setuptools
 
   run:
     - python
@@ -37,7 +36,7 @@ requirements:
 test:
   # Python imports
   imports:
-    - lambda_packages
+    - durationpy
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -52,10 +51,10 @@ test:
     # - nose
 
 about:
-  home: https://github.com/Miserlou/lambda-packages
-  license: Apache Software License
-  summary: 'AWS Lambda Packages'
-  license_family: APACHE
+  home: https://github.com/icholy/durationpy
+  license: MIT
+  summary: "Module for converting between datetime.timedelta and Go's Duration strings."
+  license_family: MIT
 
 # See
 # http://docs.continuum.io/conda/build.html for

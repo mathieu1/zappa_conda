@@ -1,11 +1,11 @@
 package:
   name: botocore
-  version: "1.4.93"
+  version: "1.5.27"
 
 source:
-  fn: botocore-1.4.93.tar.gz
-  url: https://pypi.python.org/packages/75/2b/5db4c3961b9dd8315b2e656e3fbc917cb0b5f6b3ec93b42f2894fa80f245/botocore-1.4.93.tar.gz
-  md5: a871fd80457d81488f3e193f788e0089
+  fn: botocore-1.5.27.tar.gz
+  url: https://pypi.python.org/packages/ab/cb/c609c845fa4639afde0c8cf02de8f93381dd6d73878bf9f9e5223daa8cfb/botocore-1.5.27.tar.gz
+  md5: b566b3f9b397977b1dd0802f6b918956
 #  patches:
    # List any patch files here
    # - fix.patch
